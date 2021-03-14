@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- code for using fontawesome icon -->
+    <script src="https://kit.fontawesome.com/ebe0a50799.js" crossorigin="anonymous"></script>
+
     <title>Portfolio</title>
     <meta name="description" content="Portfolio for sol"/>
     <meta name="author" content="sol"/>
+
+
 <!-- page logo -->
 <link rel="icon" type="image/png" href="imgs/icon.png">
 
@@ -20,6 +26,184 @@
 <script src="main.js" defer></script>
 </head>
 <body>
-    dsdasdasd
+  <!-- Navbar -->
+  <nav id ="Navbar">
+      <div class="navbar__logo">
+          <img class="logo" src="imgs/icon.png"></img>
+          <a href='#'>Sol</a>
+      </div>
+      <div class="navbar__menu">
+          <ul class="navbar__menu">
+              <!-- id=# class=. 사용 -->
+              <li class="navbar__menu__item">Home</li>
+              <li class="navbar__menu__item">About</li>
+              <li class="navbar__menu__item">Skills</li>
+              <li class="navbar__menu__item">My Work</li>
+              <li class="navbar__menu__item">Testimonials</li>
+              <li class="navbar__menu__item">Contact</li>
+
+          </ul>
+      </div>
+
+<!-- Home -->
+<section id="home">
+
+<!-- Home - 프로필 사진 -->
+<img src="imgs/profile.jpg" alt="sol's profile photo"
+class="home_profile"/>
+
+<!-- Home - 프로필 글 -->
+<h1 class ="home__title">HELLO <br> This is sol's Portfolio website</h1>
+<h2 class="home__description"> 나를 설명할 수 있는 한줄 글 </h2>
+<button class="home__contact">Contact Me</button>
+</section>
+  </nav>
+  <!-- About -->
+  <section id="about">
+<h1>About Me</h1>
+<p>간단히 어필할 주요 글</p>
+<div class="about__majors">
+    <!-- 1 -->
+    <div class="major">
+        <div class="major__icon"></div>
+        <!-- icon 사용 -->
+             <i class="fab fa-html5"></i>
+        <div class="major__title">Front-end</div>
+        <div class="major__description">
+                HTML, CSS, Javascript, BootStrap
+        </div>
+    </div>
+<!-- 2 -->
+<div class="major">
+    <div class="major__icon"></div>
+    <i class="fas fa-mobile-alt"></i>
+    <div class="major__title">Front-end</div>
+    <div class="major__description">
+            HTML, CSS, Javascript, BootStrap
+    </div>
+</div>
+<!-- 3 -->
+<div class="major">
+    <div class="major__icon"></div>
+    <i class="fas fa-server"></i>
+    <div class="major__title">Front-end</div>
+    <div class="major__description">
+            HTML, CSS, Javascript, BootStrap
+    </div>
+</div>
+<div class="about__jobs">
+    <!-- 1 -->
+    <div class="job">
+        <img src="imgs/edulogo-removebg.png" alt="joblogo" class="job__logo"/>
+        <p class ="job__name">더조은컴퓨터아카데미</p>
+        <p class ="job__period">20.09.16-21.03.04</p>
+    </div>
+   
+</div>
+</div>
+
+</section>
+  <!-- Skills -->
+  <section id="skills">
+<h1>Skills</h1>
+<h2>Skills & Attributes</h2>
+<p>
+    프로젝트를 하는 성향
+</p>
+<div class="sillset">
+    <div class="skillset_left"></div>
+    <div class="skillset_right"></div>
+
+    <div class="tools">
+         <h3 class="skillset_title">Tools</h3>
+             <ul class="tools__list">
+
+                 <li><span>Visual Studio Code</span></li>
+                  <li><span>Android Studio Code</span></li>
+                 <li><span>Oracle</span></li>
+                <li><span>Eclipse</span></li>
+    
+              </ul>
+    </div>
+    <div class="etc">
+        <h3 class="skillset_title">Etc</h3>
+            <ul class="etc__list">
+
+                <li><span>Git</span></li>
+              
+   
+             </ul>
+   </div>
+
+         
+</div>
+
+
+
+  </section>
+    <!-- Work -->
+    <section id="work">
+<h1>My work</h1>
+<h3>Projects</h3>
+<div class="work_categories">
+    <button class="category_btn">All<span class="category__count">8</span></button>
+    <button class="category_btn">Front-end<span class="category__count">3</span></button>
+    <button class="category_btn">Back-end<span class="category__count">3</span></button>
+    <button class="category_btn">Mobile<span class="category__count">2</span></button>
+    
+</div>
+
+<div class="work__projects">
+
+    <!-- project1 -->
+        <!-- 프로젝트 링크 -->
+    <a href="https://velog.io/@hsanol62" class="project" target="blank">
+        <!-- 프로젝트 이미지 -->
+    <img src="" class="project__img" alt="">
+         <!-- 프로젝트 설정 -->
+    <div class="project__description">
+        <h3>프로젝트 제목</h3>
+        <span>프로젝트 설명글</span>
+    </div>
+    </a>
+
+    <!-- project2 -->
+
+
+</div>
+    </section>
+
+
+      <!-- Testimonials -->
+  <section id="testimonials">
+    <h1>Testimonials</h1>
+    <h3></h3>
+    <div class="testimonials">
+        <img src="" alt="수료증" class="Testimonials__image"/>
+
+        </div>
+    </div>
+
+
+  </section>
+
+
+    <!-- Contact -->
+    <section id="Contact">
+        <h1 class="contact__title">Contact</h1>
+        <h2 class="contact__email">hsanol602@naver.com</h2>
+        <div class="contact__links">
+            <a href="https://github.com/hsanol62" target="_blank" alt="github">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/hsanol62/" target="_blank" alt="instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+        </div>
+        <p class="contact__rights">
+            2021 sol - All rights reserved
+        </p>
+    </section>
 </body>
 </html>
