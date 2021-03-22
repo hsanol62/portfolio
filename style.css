@@ -16,6 +16,7 @@
     --color-black: #000000;
     --color-beige:#fbedd1;
     --color-purple:#c043b6;
+    --color-dark-purple:#270324;
   
     /* Font size */
     --font-large: 48px;
@@ -100,13 +101,20 @@
   
   /* Navbar */
   #navbar {
+    position: fixed;
+    width:100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px;
-    background-color: var(--color-beige);
+    background-color: transparent;
+    transition: all var(--animation-duration) ease-in-out;
+    z-index: 1;
   }
-  
+  #navbar.navbar--dark{
+    background-color: var(--color-beige);
+   padding:1px;
+  }
   .navbar__logo {
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
@@ -138,23 +146,26 @@
     border-radius: var(--size-border-radius);
   }
   
-  .navbar__toggle-btn {
+  .navbar__bar_btn {
     position: absolute;
     top: 24px;
     right: 32px;
     font-size: 24px;
-    color: var(--color-white);
+    color: var(--color-purple);
     display: none;
   }
+  /* 평소에는 안보이고 */
   
   /* Home */
   #home {
     background: url('imgs/Untitled\ design\ \(1\).png') center/cover no-repeat;
     padding: 40px;
+    padding-top: 120px;
     text-align: center;
   }
   
   .home_profile {
+    text-align: center;
     margin-top: 50px;
     width: 400px;
     height: 280px;
@@ -232,14 +243,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
     /*  justify-content 로 전체 중앙 align-items으로 글자 */
     
   }
   
-  .job__description {
-    margin: 0 16px;
-    text-align: left;
-  }
+
   
   .job__name,
   .job__period {
@@ -428,22 +437,14 @@
   
   .testimonial {
     display: flex;
-    margin: 100px 100px;
   }
   
   .testimonial__pic {
     width: 190px;
     height: 260px;
-  }
-  
-  .testimonial__pic:nth-child(odd) {
-    margin-right: 40px;
-  }
-  
-  .testimonial__pic:nth-child(even) {
     margin-left: 40px;
   }
-  
+ 
  
   
   .testimonial__speech-bubble p {
@@ -456,7 +457,7 @@
   
   /* Contact */
   #contact {
-    background-color: var(--color-pink);
+    background-color: var(--color-dark-purple);
   }
   
   .contact__title,
@@ -482,7 +483,7 @@
   
   /* For below 768px screen width */
   @media screen and (max-width: 768px) {
-    .navbar__toggle-btn {
+    .navbar__bar_btn {
       display: block;
     }
   
@@ -518,5 +519,5 @@
       width: 80px;
       height: 80px;
     }
+
   }
-  

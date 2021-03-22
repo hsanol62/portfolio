@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+ 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,8 @@
 
     <!-- code for using fontawesome icon -->
     <script src="https://kit.fontawesome.com/ebe0a50799.js" crossorigin="anonymous"></script>
-
+    
+   
     <title>Portfolio</title>
     <meta name="description" content="Portfolio for sol"/>
     <meta name="author" content="sol"/>
@@ -24,11 +26,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 <!--  font-family: 'Playfair Display', serif; -->
 
+<!-- css -->
 <link rel="stylesheet" href="style.css">
+<!-- javascript -->
 <script src="main.js" defer></script>
 </head>
 <body>
-  <!-- Navbar -->
+    <!-- scrolltrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script> 
+    
+    <!-- Navbar -->
   <nav id ="navbar">
       <div class="navbar__logo">
           <!-- <img class="logo" src="imgs/icon.png"></img> -->
@@ -38,19 +46,30 @@
       <div class="navbar__menu">
           <ul class="navbar__menu">
               <!-- id=# class=. 사용 -->
-              <li class="navbar__menu__item">Home</li>
-              <li class="navbar__menu__item">About</li>
-              <li class="navbar__menu__item">Skills</li>
-              <li class="navbar__menu__item">My Work</li>
-              <li class="navbar__menu__item">Testimonials</li>
-              <li class="navbar__menu__item">Contact</li>
+              <li class="navbar__menu__item active" data-link="#home">Home</li>
+              <li class="navbar__menu__item" data-link="#about">About</li>
+              <li class="navbar__menu__item" data-link="#skills">Skills</li>
+              <li class="navbar__menu__item" data-link="#work">My Work</li>
+              <li class="navbar__menu__item" data-link="#testimonials">Testimonials</li>
+              <li class="navbar__menu__item" data-link="#contact">Contact</li>
 
           </ul>
       </div>
+
+      <!-- Toggle button -->
+      <button class="navbar__bar_btn">
+        <i class="fas fa-bars"></i>
+      </button>
+
+
+
+
   </nav>
+
+
 <!-- Home -->
 <section id="home">
-
+<div class="home__container">
 <!-- Home - 프로필 사진 -->
 <img src="imgs/profile.jpg" alt="sol's profile photo"
 class="home_profile"/>
@@ -65,6 +84,9 @@ class="home_profile"/>
   <section id="about" class="section section__container">
 <h1>About Me</h1>
 <p>간단히 어필할 주요 글I'm constantly envolving, learning, and growing</p>
+
+</div>
+
 <div class="about__majors">
     <!-- 1 -->
     <div class="major">
@@ -106,7 +128,8 @@ class="home_profile"/>
 
 </section>
   <!-- Skills -->
-  <section id="skills"  class="section">
+  <section id="skills"  class="section ">
+      <div class="section__container">
 <h1>Skills</h1>
 <h2>Skills & Attributes</h2>
 <p>
@@ -120,8 +143,13 @@ class="home_profile"/>
         <div class="skill">
           <ul class="skills__list">
 
-
+            <li><span>Java</span></li>
             <li><span>HTML</span></li>
+            <li><span>CSS</span></li>
+            <li><span>Javascript</span></li>
+            <li><span>Jquery</span></li>
+            <li><span>Oracle</span></li>
+            <li><span>Mysql</span></li>
           </ul>
    </div>
 </div>
@@ -152,11 +180,11 @@ class="home_profile"/>
          
 </div>
 </div>
-
+</div>
 
   </section>
     <!-- Work -->
-    <section id="work"  class="section">
+    <section id="work"  class="section" data-trigger>
 <h1>My work</h1>
 <h3>Projects</h3>
 <div class="work__categories">
@@ -224,16 +252,16 @@ class="home_profile"/>
 
 </div>
 
-
     </section>
 
 
       <!-- Testimonials -->
   <section id="testimonials"  class="section">
+    <div class="section__container">
     <h1>Testimonials</h1>
     <h3></h3>
     <div class="testimonials">
-        <img src="" alt="수료증" class="Testimonials__image"/>
+      
 
         <!-- testimonial1 -->
         <img
@@ -242,7 +270,7 @@ class="home_profile"/>
         class="testimonial__pic"/>
  <!-- testimonial2 -->
  <img
- SRC="imgs/tst/certificate.jpg"
+ SRC="imgs/tst/certificate2.jpg"
  alt="certificate"
  class="testimonial__pic"/>
         <!-- job -->
@@ -258,19 +286,18 @@ class="home_profile"/>
         </div>
     </div>
 
-
   </section>
 
 
     <!-- Contact -->
-    <section id="Contact" class="section">
+    <section id="contact" class="section">
         <h1 class="contact__title">Contact</h1>
         <h2 class="contact__email">hsanol602@naver.com</h2>
         <div class="contact__links">
             <a href="https://github.com/hsanol62" target="_blank" alt="github">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="https://www.instagram.com/hsanol62/" target="_blank" alt="instagram">
+            <a href="https://www.instagram.com/6sol._.h2/" target="_blank" alt="instagram">
                 <i class="fab fa-instagram"></i>
             </a>
 
