@@ -110,14 +110,20 @@
     background-color: transparent;
     transition: all var(--animation-duration) ease-in-out;
     z-index: 1;
+    
   }
   #navbar.navbar--dark{
     background-color: var(--color-beige);
-   padding:1px;
+   padding:3px;
+   /* justify-content: center; */
+  
   }
+ 
+ 
   .navbar__logo {
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
+   
    
   }
   
@@ -364,9 +370,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    opacity: 1;
+    transition: all var(--animation-duration) ease-out;
   }
   /* flex-wrap: wrap; 화면에 꽉차면 다음줄로 */
   
+
+  .work__projects.anim-out{
+    opacity: 0;
+    transform:scale(0.96) translateY(40px);
+  }
   .project {
     position: relative;
     display: flex;
@@ -378,7 +391,9 @@
     background-color: var(--color-light-white);
   
   }
-  
+  .project.invisible{
+    display:none;
+  }
   .project__img {
     max-width: 100%;
     max-height: 100%;
@@ -480,16 +495,38 @@
     transform: scale(1.1);
     color: var(--color-beige);
   }
-  
+  /* scroll 상단 이동*/
+.arrow-up {
+  position:fixed;
+  bottom:30px;
+  right:30px;
+  font-size: var(--font-large);
+  color: var(--color-dark-pink);
+ display: none;
+
+ opacity: 0;
+
+}
+.arrow-up.visible{
+  display: block;
+  opacity: 1;
+}
+
   /* For below 768px screen width */
   @media screen and (max-width: 768px) {
     .navbar__bar_btn {
       display: block;
+      position: fixed;
+    
+  
     }
   
     #navbar {
+      height: 8%;
       flex-direction: column;
       align-items: flex-start;
+      text-align: center;
+      vertical-align: middle;
     }
   
     .navbar__menu {
@@ -497,6 +534,9 @@
       text-align: center;
       width: 100%;
       display: none;
+    }
+    .logo{
+      text-align: center;
     }
   
     .about__majors {

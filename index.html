@@ -41,7 +41,7 @@
       <div class="navbar__logo">
           <!-- <img class="logo" src="imgs/icon.png"></img> -->
           <link rel="icon" type="image/png" href="imgs/background.png">
-          <a href='#'>H.S</a>
+          <a href='#' class="logo">H.S</a>
       </div>
       <div class="navbar__menu">
           <ul class="navbar__menu">
@@ -56,7 +56,7 @@
           </ul>
       </div>
 
-      <!-- Toggle button -->
+      <!-- Toggle button 창 줄였을때 나오는 메뉴바-->
       <button class="navbar__bar_btn">
         <i class="fas fa-bars"></i>
       </button>
@@ -184,17 +184,20 @@ class="home_profile"/>
 
   </section>
     <!-- Work -->
-    <section id="work"  class="section" data-trigger>
+    <section id="work" class="section" data-trigger>
 <h1>My work</h1>
 <h3>Projects</h3>
-<div class="work__categories">
-    <button class="category__btn">All
+<div class="work__categories" data-filter="*">
+    <button class="category__btn active">All
         <span class="category__count">8</span></button>
-    <button class="category__btn">Front-end
+
+    <button class="category__btn"data-filter="front-end">Front-end
         <span class="category__count">3</span></button>
-    <button class="category__btn">Back-end
+
+    <button class="category__btn"data-filter="back-end">Back-end
         <span class="category__count">3</span></button>
-    <button class="category__btn">Mobile
+
+    <button class="category__btn"data-filter="mobile">Mobile
         <span class="category__count">2</span></button>
     
 </div>
@@ -203,7 +206,7 @@ class="home_profile"/>
 
     <!-- project1 -->
         <!-- 프로젝트 링크 -->
-    <a href="https://velog.io/@hsanol62" class="project" target="blank">
+    <a href="https://velog.io/@hsanol62" class="project" target="blank" data-type="front-end">
         <!-- 프로젝트 이미지 -->
     <img src="imgs/projects/BootShop.png" class="project__img" alt="">
          <!-- 프로젝트 설정 -->
@@ -215,7 +218,7 @@ class="home_profile"/>
 
     <!-- project2 -->
         <!-- 프로젝트 링크 -->
-        <a href="https://velog.io/@hsanol62" class="project" target="blank">
+        <a href="https://velog.io/@hsanol62" class="project" target="blank" data-type="back-end" >
             <!-- 프로젝트 이미지 -->
         <img src="imgs/profile.jpg" class="project__img" alt="">
              <!-- 프로젝트 설정 -->
@@ -299,12 +302,21 @@ class="home_profile"/>
             </a>
             <a href="https://www.instagram.com/6sol._.h2/" target="_blank" alt="instagram">
                 <i class="fab fa-instagram"></i>
+                
             </a>
 
         </div>
         <p class="contact__rights">
             2021 H.sol - All rights reserved
         </p>
+
+
+        
     </section>
+
+    <button class="arrow-up">
+        <i class="fas fa-chevron-circle-up"></i>
+    </button>
+   
 </body>
 </html>

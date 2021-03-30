@@ -24,15 +24,15 @@ navbarMenu.addEventListener('click', (event) => {
 });
 
 // Navbar toggle button for small screen
-const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+const navbarToggleBtn = document.querySelector('.navbar__bar_btn');
 navbarToggleBtn.addEventListener('click', () => {
   navbarMenu.classList.toggle('open');
 });
 
-//contact me button 누르면 스크롤 이동
+// //contact me button 누르면 스크롤 이동
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
-  scrollIntoView('#contact');
+    scrollIntoView('#contact');
 });
 
 // Make home slowly fade to transparent as the window scrolls down
@@ -52,9 +52,9 @@ document.addEventListener('scroll', () => {
   }
 });
 
-// Handle click on the "arrow up" button
+// "arrow-up" button클릭하면 위로
 arrowUp.addEventListener('click', () => {
-  scrollIntoView('#home');
+    scrollIntoView('#home');
 });
 
 // Projects
@@ -68,14 +68,15 @@ workBtnContainer.addEventListener('click', (e) => {
   }
 
   // Remove selection from the previous item and select the new one
-  const active = document.querySelector('.category__btn.selected');
-  if (active != null) {
-    active.classList.remove('selected');
-  }
-  e.target.classList.add('selected');
-
+//   const active = document.querySelector('.category__btn.selected');
+//   if (active != null) {
+//     active.classList.remove('selected');
+//   }
+//   e.target.classList.add('selected');
+// project 카테고리별 클릭시 사라졌다가 나타나는 애니메이션
   projectContainer.classList.add('anim-out');
   setTimeout(() => {
+    console.log(filter);
     projects.forEach((project) => {
       console.log(project.dataset.type);
       if (filter === '*' || filter === project.dataset.type) {
@@ -84,28 +85,15 @@ workBtnContainer.addEventListener('click', (e) => {
         project.classList.add('invisible');
       }
     });
-    projectContainer.classList.remove('anim-out');
-  }, 300);
+ 
+     projectContainer.classList.remove('anim-out');
+    }, 300);
 });
 
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: 'smooth' });
 }
-
-// Your other stuff
-const anim = gsap.to("#work", {
-     opacity: 0, paused: true }); // can be left out
-
-const ST = ScrollTrigger.create({
-  trigger: "section",
-  start: 0,
-  end: "bottom bottom",
-  
-  animation: anim, // can be left out
-  pin: "#work", // can be left out
-  scrub: true      // can be left out
-});
 
 
 // The relevant part to keeping the progress
