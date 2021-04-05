@@ -26,7 +26,7 @@ navbarMenu.addEventListener('click', (event) => {
 // Navbar toggle button for small screen
 const navbarToggleBtn = document.querySelector('.navbar__bar_btn');
 navbarToggleBtn.addEventListener('click', () => {
-  navbarMenu.classList.toggle('open');
+    navbarMenu.classList.toggle('open');
 });
 
 // //contact me button 누르면 스크롤 이동
@@ -67,12 +67,14 @@ workBtnContainer.addEventListener('click', (e) => {
     return;
   }
 
-  // Remove selection from the previous item and select the new one
-//   const active = document.querySelector('.category__btn.selected');
-//   if (active != null) {
-//     active.classList.remove('selected');
-//   }
-//   e.target.classList.add('selected');
+  //project 카테고리 선택시 그대로 선택표시
+  const active = document.querySelector('.category__btn.selected');
+  if (active != null) {
+    active.classList.remove('selected');
+  }
+  e.target.classList.add('selected');
+
+
 // project 카테고리별 클릭시 사라졌다가 나타나는 애니메이션
   projectContainer.classList.add('anim-out');
   setTimeout(() => {
