@@ -650,3 +650,39 @@
       right:10px;
     
   }
+
+
+
+
+  /* my work button */
+  .slide-btn{
+    flex-direction: column-reverse;
+    
+  }
+/* 
+.navigation-dots{
+    display:flex;
+    height:32px;
+    z-index:100;
+    align-items: center;
+    justify-content: center;
+    margin:16px 0;
+}
+
+.single-dot{
+    background-color: darkcyan;
+    height: 16px;
+    width: 16px;
+    border:2px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    transition:400ms;
+    margin: 0 8px;
+    z-index:100;
+    display: flex;
+}
+
+.single-dot.active {
+    background-color: white;
+} */
+  }

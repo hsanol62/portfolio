@@ -9,8 +9,10 @@
     <!-- code for using fontawesome icon -->
     <script src="https://kit.fontawesome.com/ebe0a50799.js" crossorigin="anonymous"></script>
     
-   
-    <title>Portfolio</title>
+   <!-- code for using animatie.css -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    
+   <title>Portfolio</title>
     <meta name="description" content="Portfolio for sol"/>
     <meta name="author" content="sol"/>
 
@@ -30,6 +32,8 @@
 <link rel="stylesheet" href="style.css">
 <!-- javascript -->
 <script src="main.js" defer></script>
+<!--javascript - my work slide effect  -->
+<script src="slide.js" defer></script>
 </head>
 <body>
     <!-- scrolltrigger -->
@@ -82,8 +86,8 @@ class="home_profile"/>
   </nav>
   <!-- About -->
   <section id="about" class="section section__container">
-<h1>About Me</h1>
-<p>간단히 어필할 주요 글I'm constantly envolving, learning, and growing</p>
+<h1 class="animated fadeInUp">About Me</h1>
+<p>I'm constantly envolving, learning, and growing</p>
 
 </div>
 
@@ -204,24 +208,51 @@ class="home_profile"/>
 </div>
 
 <div class="work__projects">
-<div class="carousel-slide"></div>
+
     <!-- project1 -->
+
+  
+    <div class="carousel-slide">
+
+        <button class="prev-btn" onclick="moveSlides(-1, slide)"> 
+            <i class="fas fa-caret-left fa-2x"></i></button>
         <!-- 프로젝트 링크 -->
-    <a href="https://velog.io/@hsanol62" class="project" target="blank" data-type="front-end">
-        <!-- 프로젝트 이미지 -->
-    <img src="imgs/projects/BootShop.png" class="project__img" alt="">
-    <img src="imgs/projects/BootShop.png" class="project__img" alt="">
-    <img src="imgs/projects/BootShop.png" class="project__img" alt="">
-         <!-- 프로젝트 설정 -->
+ <a href="https://velog.io/@hsanol62" class="project" target="blank" data-type="front-end">
+            
+   
+          
+
+    <!-- 프로젝트 이미지 -->
+
+        <div class="slides-container" id="slide">
+            <div class="slide-image">
+                <img src="imgs/projects/BootShop.png" class="project__img single-dot"  onclick="currentSlide(0)" alt="">
+            </div>
+
+            <div class="slide-image active">
+                <img src="imgs/projects/BootShopy2.PNG" class="project__img single-dot"  onclick="currentSlide(1)" alt="">
+            </div>
+
+            <div class="slide-image">
+                <img src="imgs/projects/shopy3.PNG" class="project__img single-dot" onclick="currentSlide(2)" alt="">
+            </div>
+</div>
+              <!-- 프로젝트 설정 -->
     <div class="project__description">
         <h3>Shopping-mall</h3>
-        <span>BootStrap을 이용한 Shopping-mall</span>
+        <span>BootStrap을 이용한 Shopping-mall 외관</span>
+    </div>
+    </a> 
+     <!-- <button class="navigation-dots">
+        <button class="single-dot"  onclick="currentSlide(0)"></button>
+        <button class="single-dot active"  onclick="currentSlide(1)"></button>
+        <button class="single-dot"  onclick="currentSlide(2)"></button>
+    </button> -->
 
-        <button id="prevBtn">Prev</button>
-        <button id="prevBtn">Next</button>
-    </div>
-    </div>
-    </a>
+    <button class="next-btn" onclick="moveSlides(1, slide)"><i class="fas fa-caret-right fa-2x"></i></button>
+        </div>
+  
+
 
     <!-- project2 -->
         <!-- 프로젝트 링크 -->
@@ -248,17 +279,50 @@ class="home_profile"/>
     </a>
 
     
-        <!--project4 -->
-                <!-- 프로젝트 링크 -->
-                <a href="https://velog.io/@hsanol62" class="project" target="blank">
-                    <!-- 프로젝트 이미지 -->
-                <img src="" class="project__img" alt="">
-                     <!-- 프로젝트 설정 -->
-                <div class="project__description">
-                    <h3>프로젝트 제목</h3>
-                    <span>프로젝트 설명글</span>
-                </div>
-                </a>
+       <!-- project4 -->
+    <div class="carousel-slide">
+
+        <button class="prev-btn" onclick="moveSlides(-1, 'slide1')"> 
+            <i class="fas fa-caret-left fa-2x"></i></button>
+        <!-- 프로젝트 링크 -->
+ <a href="https://velog.io/@hsanol62" class="project" target="blank" data-type="back-end">
+            
+   
+    <!-- 프로젝트 이미지 -->
+
+        <div class="slides-container" id="slide1">
+            <div class="slide-image">
+                <img src="imgs/projects/nonage.PNG" class="project__img single-dot"  onclick="currentSlide(0)" alt="">
+            </div>
+
+            <div class="slide-image active">
+                <img src="imgs/projects/nonage2.PNG" class="project__img single-dot"  onclick="currentSlide(1)" alt="">
+            </div>
+
+            <div class="slide-image">
+                <img src="imgs/projects/nonage3.PNG" class="project__img single-dot" onclick="currentSlide(2)" alt="">
+            </div>
+            <div class="slide-image">
+                <img src="imgs/projects/nonageitem2.PNG" class="project__img single-dot" onclick="currentSlide(3)" alt="">
+            </div>
+</div>
+              <!-- 프로젝트 설정 -->
+    <div class="project__description">
+        <h3>Shopping-mall</h3>
+        <span>BootStrap을 이용한 Shopping-mall 외관</span>
+    </div>
+    </a> 
+     <!-- <button class="navigation-dots">
+        <button class="single-dot"  onclick="currentSlide(0)"></button>
+        <button class="single-dot active"  onclick="currentSlide(1)"></button>
+        <button class="single-dot"  onclick="currentSlide(2)"></button>
+    </button> -->
+
+    <button class="next-btn" onclick="moveSlides(1)"><i class="fas fa-caret-right fa-2x"></i></button>
+        </div>
+  
+
+
 
 </div>
 
@@ -268,21 +332,14 @@ class="home_profile"/>
       <!-- Testimonials -->
   <section id="testimonials"  class="section">
     <div class="section__container">
-    <h1>Testimonials</h1>
+    <!-- <h1>Testimonials</h1> -->
     <h3></h3>
     <div class="testimonials">
       <div class="testimonial__pics">
 
         <!-- testimonial1 -->
-        <img
-        SRC="imgs/tst/certificate.jpg"
-        alt="certificate"
-        class="testimonial__pic"/>
+       
  <!-- testimonial2 -->
- <img
- SRC="imgs/tst/certificate2.jpg"
- alt="certificate"
- class="testimonial__pic"/>
  </div>
         <!-- job -->
 <div class="about__jobs">
