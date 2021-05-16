@@ -58,39 +58,39 @@ arrowUp.addEventListener('click', () => {
 });
 
 // Projects
-const workBtnContainer = document.querySelector('.work__categories');
-const projectContainer = document.querySelector('.work__projects');
-const projects = document.querySelectorAll('.project');
-workBtnContainer.addEventListener('click', (e) => {
-  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-  if (filter == null) {
-    return;
-  }
+// const workBtnContainer = document.querySelector('.work__categories');
+// const projectContainer = document.querySelector('.work__projects');
+// const projects = document.querySelectorAll('.project');
+// workBtnContainer.addEventListener('click', (e) => {
+//   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+//   if (filter == null) {
+//     return;
+//   }
 
-  //project 카테고리 선택시 그대로 선택표시
-  const active = document.querySelector('.category__btn.selected');
-  if (active != null) {
-    active.classList.remove('selected');
-  }
-  e.target.classList.add('selected');
+//   //project 카테고리 선택시 그대로 선택표시
+//   const active = document.querySelector('.category__btn.selected');
+//   if (active != null) {
+//     active.classList.remove('selected');
+//   }
+//   e.target.classList.add('selected');
 
 
 // project 카테고리별 클릭시 사라졌다가 나타나는 애니메이션
-  projectContainer.classList.add('anim-out');
-  setTimeout(() => {
-    console.log(filter);
-    projects.forEach((project) => {
-      console.log(project.dataset.type);
-      if (filter === '*' || filter === project.dataset.type) {
-        project.classList.remove('invisible');
-      } else {
-        project.classList.add('invisible');
-      }
-    });
+//   projectContainer.classList.add('anim-out');
+//   setTimeout(() => {
+//     console.log(filter);
+//     projects.forEach((project) => {
+//       console.log(project.dataset.type);
+//       if (filter === '*' || filter === project.dataset.type) {
+//         project.classList.remove('invisible');
+//       } else {
+//         project.classList.add('invisible');
+//       }
+//     });
  
-     projectContainer.classList.remove('anim-out');
-    }, 300);
-});
+//      projectContainer.classList.remove('anim-out');
+//     }, 300);
+// });
 
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);

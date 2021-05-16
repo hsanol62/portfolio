@@ -29,11 +29,14 @@
 <!--  font-family: 'Playfair Display', serif; -->
 
 <!-- css -->
+
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="project.css">
 <!-- javascript -->
 <script src="main.js" defer></script>
+
 <!--javascript - my work slide effect  -->
-<script src="slide.js" defer></script>
+<script src="project.js" defer></script>
 </head>
 <body>
     <!-- scrolltrigger -->
@@ -88,19 +91,20 @@ class="home_profile"/>
   <section id="about" class="section section__container">
 <h1 class="animated fadeInUp">About Me</h1>
 <p>I'm constantly envolving, learning, and growing</p>
-
 </div>
 
 <div class="about__majors">
     <!-- 1 -->
     <div class="major">
+      
         <div class="major__icon">
-            <i class="fab fa-html5"></i>
+            <img src="imgs/skills/frontend.png" class= "major-img">
+            <!-- <i class="fab fa-html5"></i> -->
         </div>
       
         <!-- icon 사용 -->
-           
-        <div class="major__title">Front-end</div>
+<!--            
+        <div class="major__title">Front-end</div> -->
         <div class="major__description">
                 HTML, CSS, Javascript, BootStrap
         </div>
@@ -108,9 +112,9 @@ class="home_profile"/>
 <!-- 2 -->
 <div class="major">
     <div class="major__icon">
-        <i class="fas fa-server"></i>
+      <img src="imgs/skills/backend.png" class= "major-img">
 </div>
-    <div class="major__title">Back-end</div>
+    
     <div class="major__description">
            Java, Javascript, JSP, Oracle, Mysql, Apache
     </div>
@@ -118,17 +122,14 @@ class="home_profile"/>
 <!-- 3 -->
 <div class="major">
     <div class="major__icon">
-       
-        <i class="fas fa-mobile-alt"></i>
+      <img src="imgs/skills/mobile.png" class= "major-img">
 </div>
-    <div class="major__title">Mobile</div>
+
     <div class="major__description">
            Android, Java
     </div>
 </div>
 </div>
-
-
 
 
 </section>
@@ -192,7 +193,7 @@ class="home_profile"/>
     <section id="work" class="section" data-trigger>
 <h1>My work</h1>
 <h3>Projects</h3>
-<div class="work__categories" data-filter="*">
+<!-- <div class="work__categories" data-filter="*">
     <button class="category__btn active">All
         <span class="category__count">8</span></button>
 
@@ -205,129 +206,261 @@ class="home_profile"/>
     <button class="category__btn"data-filter="mobile">Mobile
         <span class="category__count">2</span></button>
     
-</div>
+</div> -->
 
 <div class="work__projects">
+ <!-- portfolio section-->
+ <section class="portfolio-section sec-padding">
+    <div class="container">
 
-    <!-- project1 -->
+      <div class="row">
+        <div class="portfolio-filter" >
+          <!--  data-filter="*" 는 없음 -->
+            <button type="button" title="Show All Works" class="portfolio-filter-btn active" data-filter="all">All
+                <!-- <span class="category__count">8</span></button> -->
+        
+            <button type="button"  title="Filter by Front-End" class="portfolio-filter-btn"data-filter="front-end">Front-end
+                <!-- <span class="category__count">3</span></button> -->
+        
+            <button type="button" title="Filter by Front-End"class="portfolio-filter-btn"data-filter="back-end">Back-end
+                <!-- <span class="category__count">3</span></button>
+         -->
+            <button type="button" title="Filter by Front-End" class="portfolio-filter-btn"data-filter="mobile">Mobile
+                <!-- <span class="category__count">2</span></button> -->
 
-  
-    <div class="carousel-slide">
+                </div>
+                <!-- <div class="filter-status"> 
+                  <p>filtering <span>all</span> works</p>
+        </div> -->
+        </div>
+          <div class="row portfolio-items">
+            <!-- portfolio item1 -->
+              <div class="portfolio-item" data-category="front-end, back-end" >
+                  <div class="portfolio-item-thumbnail">
+                    <img src="imgs/projects/nonage.PNG" class=project__img alt="">
+                    <button type="button" class="btn more-info-btn"> more ifo </button>
+                  </div>
+                  <h3 class="portfolio-item-title">Shopping-mall</h3>
+                  <div class="portfolio-item-details">
+                      <div class="description">
+                        <p>Lorem ipsum, dolor sit amet consectetur
+                           adipisicing elit. Molestias fugit sint cumque tenetur nobis rerum!
+                            Harum, expedita excepturi et provident enim fugit distinctio esse nemo n
+                            ostrum doloribus ullam numquam maiores.
+                            
+                        </p>
+                      </div>
+                      <div class="general-info">
 
-        <button class="prev-btn" onclick="moveSlides(-1, slide)"> 
-            <i class="fas fa-caret-left fa-2x"></i></button>
-        <!-- 프로젝트 링크 -->
- <a href="https://velog.io/@hsanol62" class="project" target="blank" data-type="front-end">
-            
-   
+                        <p> Created<span> 2021</span></p>
+                        <p>Technologies Used<span> Html, Css, JSP, Oracle, Tomcat </span></p>
+                        <p>Role-<span>Front-End</span></p>
+                        <p>View Online
+                           <a href="https://hsanol62.github.io/portfolio/">d</a>
+                        </p>
+                        
+                      </div>
+                  </div>
+
+
+              </div>
+            <!--portfolio item  end  -->
+
+               <!-- portfolio item2 -->
+               <div class="portfolio-item" data-category="mobile" >
+                <div class="portfolio-item-thumbnail">
+                  <img src="imgs/projects/BootShop.png" class=project__img  alt="Bootstrap_shopping_mall">
+                  <button type="button" class="btn more-info-btn"> more ifo </button>
+                </div>
+                <h3 class="portfolio-item-title">Bootstrap_shopping_mall</h3>
+                <div class="portfolio-item-details">
+                    <div class="description">
+                      <p>Bootstrap을 사용해 쇼핑몰 레이아웃을 만들어 보았다.
+
+                      </p>
+                    </div>
+                    <div class="general-info">
+
+                      <p> Created<span> 2021</span></p>
+                      <p>Technologies Used<span> Html, Css</span></p>
+                      <p>Role-<span>Front-End</span></p>
+                      <p>View Online<span> <a href=""></a></span></p>
+                    </div>
+                </div>
+
+
+            </div>
+               <!--portfolio item  end  -->
+
+                 <!-- portfolio item3 -->
+              <div class="portfolio-item" data-category="front-end" >
+                <div class="portfolio-item-thumbnail">
+                  <img src="imgs/projects/frontendlayout.png" class=project__img alt="frontendlayout">
+                  <button type="button" class="btn more-info-btn"> more ifo </button>
+                </div>
+                <h3 class="portfolio-item-title">front-end-web</h3>
+                <div class="portfolio-item-details">
+                    <div class="description">
+                      <p>HTML과 CSS로 페이지 레이아웃 제작
+
+                      </p>
+                    </div>
+                    <div class="general-info">
+
+                      <p> Created<span> 2021</span></p>
+                      <p>Technologies Used<span> Html, Css</span></p>
+                      <p>Role-<span>Front-End</span></p>
+                      <p>View Online<span> <a href=""></a></span></p>
+                    </div>
+                </div>
+
+
+            </div>
+              <!--portfolio item  end  -->
+
+                 <!-- portfolio item4 -->
+              <div class="portfolio-item" data-category="back-end" >
+                <div class="portfolio-item-thumbnail">
+                  <img src="tst/portfolio-thumb-5.jpg" class=project__img  alt="">
+                  <button type="button" class="btn more-info-btn"> more ifo </button>
+                </div>
+                <h3 class="portfolio-item-title">portfolio1</h3>
+                <div class="portfolio-item-details">
+                    <div class="description">
+                      <p>Lorem ipsum, dolor sit amet consectetur
+                         adipisicing elit. Molestias fugit sint cumque tenetur nobis rerum!
+                          Harum, expedita excepturi et provident enim fugit distinctio esse nemo n
+                          ostrum doloribus ullam numquam maiores.
+
+                      </p>
+                    </div>
+                    <div class="general-info">
+
+                      <p> Created<span> 4 Dec 2020</span></p>
+                      <p>Technologies Used<span> Html, Css</span></p>
+                      <p>Role-<span>Front-End</span></p>
+                      <p>View Online<span> <a href=""></a></span></p>
+                    </div>
+                </div>
+            </div>
           
 
-    <!-- 프로젝트 이미지 -->
+  <!-- portfolio item1 -->
+              <div class="portfolio-item" data-category="back-end" >
+                <div class="portfolio-item-thumbnail">
+                  <img src="tst/portfolio-thumb-5.jpg" class=project__img  alt="">
+                  <button type="button" class="btn more-info-btn"> more ifo </button>
+                </div>
+                <h3 class="portfolio-item-title">portfolio1</h3>
+                <div class="portfolio-item-details">
+                    <div class="description">
+                      <p>Lorem ipsum, dolor sit amet consectetur
+                         adipisicing elit. Molestias fugit sint cumque tenetur nobis rerum!
+                          Harum, expedita excepturi et provident enim fugit distinctio esse nemo n
+                          ostrum doloribus ullam numquam maiores.
 
-        <div class="slides-container" id="slide">
-            <div class="slide-image">
-                <img src="imgs/projects/BootShop.png" class="project__img single-dot"  onclick="currentSlide(0)" alt="">
+                      </p>
+                    </div>
+                    <div class="general-info">
+
+                      <p> Created<span> 4 Dec 2020</span></p>
+                      <p>Technologies Used<span> Html, Css</span></p>
+                      <p>Role-<span>Front-End</span></p>
+                      <p>View Online<span> <a href=""></a></span></p>
+                    </div>
+                </div>
+
+
             </div>
 
-            <div class="slide-image active">
-                <img src="imgs/projects/BootShopy2.PNG" class="project__img single-dot"  onclick="currentSlide(1)" alt="">
+
+              <!-- portfolio item6 -->
+              <div class="portfolio-item" data-category="mobile" >
+                <div class="portfolio-item-thumbnail">
+                  <img src="tst/banner-about.jpg" class=project__img  alt="">
+                  <button type="button" class="btn more-info-btn"> more ifo </button>
+                </div>
+                <h3 class="portfolio-item-title">portfolio6</h3>
+                <div class="portfolio-item-details">
+                    <div class="description">
+                      <p>Lorem ipsum, dolor sit amet consectetur
+                         adipisicing elit. Molestias fugit sint cumque tenetur nobis rerum!
+                          Harum, expedita excepturi et provident enim fugit distinctio esse nemo n
+                          ostrum doloribus ullam numquam maiores.
+
+                      </p>
+                    </div>
+                    <div class="general-info">
+
+                      <p> Created<span> 4 Dec 2020</span></p>
+                      <p>Technologies Used<span> Html, Css</span></p>
+                      <p>Role-<span>Front-End</span></p>
+                      <p>View Online<span> <a href=""></a></span></p>
+                    </div>
+                </div>
+
+
             </div>
 
-            <div class="slide-image">
-                <img src="imgs/projects/shopy3.PNG" class="project__img single-dot" onclick="currentSlide(2)" alt="">
-            </div>
-</div>
-              <!-- 프로젝트 설정 -->
-    <div class="project__description">
-        <h3>Shopping-mall</h3>
-        <span>BootStrap을 이용한 Shopping-mall 외관</span>
-    </div>
-    </a> 
-     <!-- <button class="navigation-dots">
-        <button class="single-dot"  onclick="currentSlide(0)"></button>
-        <button class="single-dot active"  onclick="currentSlide(1)"></button>
-        <button class="single-dot"  onclick="currentSlide(2)"></button>
-    </button> -->
 
-    <button class="next-btn" onclick="moveSlides(1, slide)"><i class="fas fa-caret-right fa-2x"></i></button>
+          </div>
+         <!--portfolio item  end  -->
+
+
+
+          
+        
+      </div>
+<!-- items end -->
+
+
+   </section>
+   <!-- potfolio Section End -->
+
+   <!-- portfolio Item Details popup Start -->
+   <div class="portfolio-popup">
+      <div class="pp-inner">
+        <div class="pp-content">
+
+          <div class="pp-header">
+              <h2 class="pp-counter">
+             
+
+              </h2>
+              <button type="button" title="close"  class="close-btn pp-close-btn"></button>
+            <div class="pp-thumbnail">
+              <img src="tst/portfolio-thumb-5.jpg" alt="">
+            </div>
+            <h3></h3>
+            <div class="pp-body">
+
+
+            </div>
+              <div class="pp-footer">
+                  <div class= "pp-footer-left hidden">
+                    <button type="button" title="Prev Work" class="btn pp-prev-btn"><i class="fas fa-caret-left"></i></button>
+                      <h3></h3>
+                      <img src="tst/portfolio-thumb-5.jpg" alt="">
+            
+                  </div>
+                  <div class="pp-footer-right hidden">
+                    <button type="button" title="Next Work" class="btn pp-next-btn"><i class="fas fa-caret-right"></i></button>
+                      <h3></h3>
+                      <img src="tst/portfolio-thumb-5.jpg" alt="">
+                  </div>
+              </div>
+            </div>
+          </div>
         </div>
-  
+      </div>
 
 
-    <!-- project2 -->
-        <!-- 프로젝트 링크 -->
-        <a href="https://velog.io/@hsanol62" class="project" target="blank" data-type="front-end" >
-            <!-- 프로젝트 이미지 -->
-        <img src="imgs/profile.jpg" class="project__img" alt="">
-             <!-- 프로젝트 설정 -->
-        <div class="project__description">
-            <h3>프로젝트 제목</h3>
-            <span>프로젝트 설명글</span>
-        </div>
-        </a>
+   </div>
 
-        <!--project3 -->
-                <!-- 프로젝트 링크 -->
-    <a href="https://velog.io/@hsanol62" class="project" target="blank">
-        <!-- 프로젝트 이미지 -->
-    <img src="" class="project__img" alt="">
-         <!-- 프로젝트 설정 -->
-    <div class="project__description">
-        <h3>프로젝트 제목</h3>
-        <span>프로젝트 설명글</span>
-    </div>
-    </a>
+</section>
+    <!-- portfolio Item Details popup end -->
 
     
-       <!-- project4 -->
-    <div class="carousel-slide">
-
-        <button class="prev-btn" onclick="moveSlides(-1, 'slide1')"> 
-            <i class="fas fa-caret-left fa-2x"></i></button>
-        <!-- 프로젝트 링크 -->
- <a href="https://velog.io/@hsanol62" class="project" target="blank" data-type="back-end">
-            
-   
-    <!-- 프로젝트 이미지 -->
-
-        <div class="slides-container" id="slide1">
-            <div class="slide-image">
-                <img src="imgs/projects/nonage.PNG" class="project__img single-dot"  onclick="currentSlide(0)" alt="">
-            </div>
-
-            <div class="slide-image active">
-                <img src="imgs/projects/nonage2.PNG" class="project__img single-dot"  onclick="currentSlide(1)" alt="">
-            </div>
-
-            <div class="slide-image">
-                <img src="imgs/projects/nonage3.PNG" class="project__img single-dot" onclick="currentSlide(2)" alt="">
-            </div>
-            <div class="slide-image">
-                <img src="imgs/projects/nonageitem2.PNG" class="project__img single-dot" onclick="currentSlide(3)" alt="">
-            </div>
-</div>
-              <!-- 프로젝트 설정 -->
-    <div class="project__description">
-        <h3>Shopping-mall</h3>
-        <span>BootStrap을 이용한 Shopping-mall 외관</span>
-    </div>
-    </a> 
-     <!-- <button class="navigation-dots">
-        <button class="single-dot"  onclick="currentSlide(0)"></button>
-        <button class="single-dot active"  onclick="currentSlide(1)"></button>
-        <button class="single-dot"  onclick="currentSlide(2)"></button>
-    </button> -->
-
-    <button class="next-btn" onclick="moveSlides(1)"><i class="fas fa-caret-right fa-2x"></i></button>
-        </div>
-  
-
-
-
-</div>
-
-    </section>
-
 
       <!-- Testimonials -->
   <section id="testimonials"  class="section">
@@ -359,7 +492,7 @@ class="home_profile"/>
 
     <!-- Contact -->
     <section id="contact" class="section">
-       
+    
         <h1 class="contact__title">Contact</h1>
         <h2 class="contact__email">hsanol602@naver.com</h2>
         <div class="contact__links">
