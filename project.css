@@ -381,7 +381,12 @@
   .pp-thumbnail{
     padding: 20px 0;
   }
+  .pp-thumbnail img{
+    max-height: 600px;
+    width: auto;
+    max-width: 100%;
   
+  }
   .pp-header h3{
     font-size: var(--font-medium);
     text-transform: capitalize;
